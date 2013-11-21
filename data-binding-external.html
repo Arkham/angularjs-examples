@@ -10,7 +10,7 @@
     <div ng-controller="InvoiceController as invoice">
       <b>Invoice:</b>
       <div>
-        Quantity: <input type="number" ng-model="invoice.qty" required>
+        Quantity: <input type="text" ng-model="invoice.qty" required smart-float>
       </div>
       <div>
         Cost: <input type="number" ng-model="invoice.cost" required>
