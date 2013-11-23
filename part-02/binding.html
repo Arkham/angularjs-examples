@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <link rel="stylesheet" href="foundation.min.css">
+    <script src="http://code.angularjs.org/1.2.1/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app>
+      <input type="text" ng-model="data.message" />
+      <h1>{{ data.message }}</h1>
+      <div class="{{ data.message }}">
+        Wrap me with a foundation class
+      </div>
+    </div>
+  </body>
+</html>
+
