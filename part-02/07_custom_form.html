@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="custom-form">
+  <head>
+    <link rel="stylesheet" href="foundation.min.css">
+    <script src="http://code.angularjs.org/1.2.1/angular.min.js"></script>
+    <script src="custom-form.js"></script>
+  </head>
+  <body>
+    <div contentEditable="true" ng-model="content" title="Click to edit">Some content</div>
+    <pre>model = {{ content }}</pre>
+    <style type="text/css">
+      div[contentEditable] {
+        cursor: pointer;
+        background-color: #D0D0D0;
+      }
+    </style>
+  </body>
+</html>
