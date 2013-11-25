@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="spicy-controller.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <div ng-controller="SpicyCtrl">
+      <button ng-click="chiliSpicy()">Chili</button>
+      <button ng-click="jalapenoSpicy()">Jalapeño</button>
+      <input ng-model="customSpice" value="wasabi">
+      <button ng-click="spicy(customSpice)">Custom spice</button>
+      <p>The food is {{spice}} spicy</p>
+    </div>
+  </body>
+</html>
