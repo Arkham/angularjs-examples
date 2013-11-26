@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="reversed_filter.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp">
+
+      <div ng-controller="FirstController">
+        <input type="text" ng-model="data.message">
+        <h1>{{ data.message }}</h1>
+      </div>
+
+      <div ng-controller="SecondController">
+        <input type="text" ng-model="data.message">
+        <h1>{{ data.message | reverse }}</h1>
+      </div>
+
+    </div>
+  </body>
+</html>
+
