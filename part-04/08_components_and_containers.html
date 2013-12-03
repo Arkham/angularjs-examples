@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="directives.js"></script>
+  </head>
+  <body>
+    <div ng-app="directiveApp">
+      <clock timezone="CEST"></clock>
+      <br>
+      <panel title="Hey, I'm the title">
+        <clock timezone="UTC"></clock>
+        <clock timezone="UTC"></clock>
+        <clock timezone="UTC"></clock>
+      </panel>
+    </div>
+  </body>
+</html>
