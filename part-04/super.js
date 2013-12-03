@@ -2,7 +2,9 @@ var app = angular.module('superApp', []);
 
 app.directive('superhero', function () {
   return {
-    element: 'E',
+    restrict: 'E',
+
+    scope: {},
 
     controller: function ($scope) {
       $scope.abilities = []
@@ -21,9 +23,37 @@ app.directive('superhero', function () {
     },
 
     link: function (scope, element) {
+      element.addClass('button')
       element.bind('mouseenter', function () {
         console.log(scope.abilities)
       })
+    }
+  }
+})
+
+app.directive('strength', function () {
+  return {
+    require: 'superhero',
+    link: function (scope, element, attrs, superheroCtrl) {
+      superheroCtrl.addStrength();
+    }
+  }
+})
+
+app.directive('speed', function () {
+  return {
+    require: 'superhero',
+    link: function (scope, element, attrs, superheroCtrl) {
+      superheroCtrl.addSpeed();
+    }
+  }
+})
+
+app.directive('flight', function () {
+  return {
+    require: 'superhero',
+    link: function (scope, element, attrs, superheroCtrl) {
+      superheroCtrl.addFlight();
     }
   }
 })
