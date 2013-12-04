@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="scope.js"></script>
+  </head>
+  <body>
+    <div ng-app="scopeApp">
+      <div ng-controller="scopeCtrl">
+        <button ng-click="show=true">show</button>
+
+        <label>Username</label>
+        <input type="text" ng-model="username">
+
+        <dialog title="Hello {{username}}."
+          visible="show"
+          on-cancel="show = false"
+          on-ok="show = false; doSomething()">
+        </dialog>
+      </div>
+
+    </div>
+  </body>
+</html>
