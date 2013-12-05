@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="drink.js"></script>
+  </head>
+  <body>
+    <div ng-app="drinkApp">
+      <div ng-controller="AppCtrl">
+        <input type="text" ng-model="ctrlFlavour">
+        <div drink flavor="{{ctrlFlavour}}"></div>
+        <div sweet flavor="ctrlFlavour"></div>
+      </div>
+    </div>
+  </body>
+</html>
