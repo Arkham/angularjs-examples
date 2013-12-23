@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="controller_as.js"></script>
+  </head>
+  <body>
+    <div ng-app="app">
+      <div ng-controller="RoomCtrl as room">
+        <div class="button" ng-click="room.clickMe()">
+          {{room.buttonTitle}}
+          <div ng-controller="DoorCtrl as door">
+            {{room.roomSign}}
+            {{door.doorMaterial}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
