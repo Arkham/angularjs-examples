@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="logger.js"></script>
+  </head>
+  <body ng-app="app">
+    <div ng-click="ev = $event; $log.debug(ev)" ng-repeat="item in 'somenicechars'.split('') track by $index">
+      <div class="button">
+        {{$index}} {{item}}
+        {{ev.pageY}}
+      </div>
+    </div>
+  </body>
+</html>
