@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="../vendor/angular-route.min.js"></script>
+    <script src="route_lifecycle.js"></script>
+  </head>
+  <body>
+    <div ng-app="app" ng-controller="AppCtrl">
+      <ng-view></ng-view>
+
+      <script type="text/ng-template" id="app.html">
+        <h1>Welcome to my app!</h1>
+        <a ng-click="changeRoute()">I want to make stuff</a>
+      </script>
+
+      <script type="text/ng-template" id="new.html">
+        <h1>Time for something new!</h1>
+      </script>
+    </div>
+  </body>
+</html>
