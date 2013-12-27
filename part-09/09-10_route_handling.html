@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../vendor/foundation.min.css">
+    <script src="../vendor/angular.min.js"></script>
+    <script src="../vendor/angular-route.min.js"></script>
+    <script src="route_handling.js"></script>
+  </head>
+  <body>
+    <div ng-app="app" ng-controller="AppCtrl">
+      <network-error></network-error>
+      <ng-view></ng-view>
+
+      <script type="text/ng-template" id="app.html">
+        <h1>{{model.title}}</h1>
+      </script>
+    </div>
+  </body>
+</html>
