@@ -49,4 +49,3 @@ viewCtrl.loadData = function ($q, $timeout) {
   return defer.promise;
 }
 
-
